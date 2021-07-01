@@ -14,9 +14,9 @@ public class StudentDaoImplement implements StudentDao {
     QueryRunner qr = new QueryRunner(new ComboPooledDataSource());
 
     @Override
-    public List<Student> selectAllStu() throws SQLException {
-        String sql = "SELECT * FROM student";
-        List<Student> studentList = qr.query(sql, new BeanListHandler<Student>(Student.class));
+    public List<Student> selectGradeStu(String name) throws SQLException {
+        String sql = "SELECT * FROM student WHERE gradeid = (SELECT gradeid FROM student WHERE sname=?)";
+        List<Student> studentList = qr.query(sql, new BeanListHandler<Student>(Student.class), name);
         return studentList;
     }
 
@@ -24,5 +24,18 @@ public class StudentDaoImplement implements StudentDao {
     public Student login(String name, String pwd) throws SQLException {
         String sql = "select * from student where sname=? and password=?";
         return qr.query(sql, new BeanHandler<Student>(Student.class), name, pwd);
+    }
+
+    @Override
+    public Student selectOneStuBySid(Integer sid) throws SQLException {
+        String sql = "SELECT * FROM student WHERE sid=?";
+        return qr.query(sql, new BeanHandler<Student>(Student.class), sid);
+    }
+
+    @Override
+    public void updateStu(Student student) throws SQLException {
+        String sql = "UPDATE student SET sname=?,sno=?,gradeid=?,address=?,score=?,PASSWORD=? WHERE sid =?";
+        qr.update(sql, student.getSname(), student.getSno(), student.getGradeid(), student.getAddress(),
+                student.getScore(), student.getPassword(), student.getSid());
     }
 }

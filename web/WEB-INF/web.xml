@@ -15,4 +15,29 @@
         <servlet-name>userRegServlet</servlet-name>
         <url-pattern>/reg</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <!--声明Servlet名称-->
+        <servlet-name>updateEdit</servlet-name>
+        <!--实现类-->
+        <servlet-class>com.whpu.servlet.UpdateEditServlet</servlet-class>
+    </servlet>
+    <!--映射请求路径-->
+    <servlet-mapping>
+        <servlet-name>updateEdit</servlet-name>
+        <url-pattern>/updateEdit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <!--声明Servlet名称-->
+        <servlet-name>updateSubmit</servlet-name>
+        <!--实现类-->
+        <servlet-class>com.whpu.servlet.UpdateSubmitServlet</servlet-class>
+    </servlet>
+    <!--映射请求路径-->
+    <servlet-mapping>
+        <servlet-name>updateSubmit</servlet-name>
+        <!--访问的后缀-->
+        <url-pattern>/updateSubmit</url-pattern>
+    </servlet-mapping>
 </web-app>

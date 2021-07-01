@@ -32,6 +32,7 @@
                 <td>${s.gradeid}</td>
                 <td>${s.address}</td>
                 <td>${s.score}</td>
+                <td><a href="/updateEdit?sid=${s.sid}">修改</a>  <a href="">删除</a> </td>
             </tr>
         </c:forEach>
     </table>

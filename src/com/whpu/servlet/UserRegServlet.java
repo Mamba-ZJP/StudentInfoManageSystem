@@ -57,7 +57,7 @@ public class UserRegServlet implements Servlet {
                 result = "登陆成功!";
 
                 // 跳转页面 同时传递数据（将所有学生信息展示出来）
-                List<Student> studentList = studentDao.selectAllStu();
+                List<Student> studentList = userDao.selectAllStu();
 
                 // 将数据放到请求域中，传递到页面(应用3)
                 request.setAttribute("studentList", studentList);
@@ -72,6 +72,13 @@ public class UserRegServlet implements Servlet {
             if (loginType.equals("学生") && student != null) {
                 // 转发到
                 response.getWriter().print("学生登录成功");
+                List<Student> studentList = studentDao.selectGradeStu(username);
+                System.out.println("你好");
+                for (Student stu: studentList) {
+                    System.out.println("stu = " + stu);
+                }
+                // 将数据放到请求域中，传递到页面(应用3)
+                request.setAttribute("studentList", studentList);
                 request.getRequestDispatcher("jsp/showInfoStudent.jsp").forward(request, response);
 
             } else if (loginType.equals("学生")) {

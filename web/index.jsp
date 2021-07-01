@@ -13,9 +13,9 @@
   <body>
     <form action="reg">
       用户名：
-      <input type="text" name="username"> <br>
+      <input type="text" name="username" required> <br>
       密 码：
-      <input type="text" name="password"> <br>
+      <input type="text" name="password" required> <br>
 
       登录类型：
       <input type="radio" name="loginType" value="学生"/>学生用户

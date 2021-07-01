@@ -9,6 +9,18 @@ public class Student {
     private Integer score;
     private String password;
 
+    public Student(Integer sid, String sname, String sno, Integer gradeid, String address, Integer score, String password) {
+        this.sid = sid;
+        this.sname = sname;
+        this.sno = sno;
+        this.gradeid = gradeid;
+        this.address = address;
+        this.score = score;
+        this.password = password;
+    }
+
+    public Student() {}
+
     public Integer getSid() {
         return sid;
     }
@@ -57,7 +69,7 @@ public class Student {
         this.score = score;
     }
 
-    public  String getPassword(String password) {
+    public  String getPassword() {
         return password;
     }
 
