@@ -69,7 +69,6 @@ public class UserRegServlet implements Servlet {
             }
 
             Student student = studentDao.login(username, password);
-//            System.out.println("student = " + student);
             if (loginType.equals("学生") && student != null) {
                 // 转发到
                 response.getWriter().print("学生登录成功");
