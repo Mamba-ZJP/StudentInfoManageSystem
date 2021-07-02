@@ -12,7 +12,8 @@
 </head>
 <body>
     修改页面
-    <form action="updateSubmit">
+    <%--配置上下文--%>
+    <form action="${pageContext.request.contextPath}/updateSubmit">
         编号：
         <input type="text" name="sid" value="${student.sid}" readonly/><br>
         姓名：

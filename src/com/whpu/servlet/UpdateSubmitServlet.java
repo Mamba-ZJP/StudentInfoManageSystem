@@ -34,12 +34,10 @@ public class UpdateSubmitServlet implements Servlet {
         String sname = request.getParameter("sname");
         String sno = request.getParameter("sno");
         String address = request.getParameter("address");
-        s = request.getParameter("gradeid");
-        int gradeid = Integer.parseInt(s);
-
-        s = request.getParameter("score");
-        int score = Integer.parseInt(s);
         String password = request.getParameter("password");
+
+        int gradeid = Integer.parseInt(request.getParameter("gradeid"));
+        int score = Integer.parseInt(request.getParameter("score"));
 
         Student student = new Student(sid, sname, sno, gradeid, address, score, password);
         try {

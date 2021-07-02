@@ -12,7 +12,7 @@
 </head>
 <body>
     添加页面
-    <form action="/add">
+    <form action="${pageContext.request.contextPath}/add">
         姓名：
         <input type="text" name="sname" value=""/><br>
         学号：
