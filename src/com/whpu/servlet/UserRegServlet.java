@@ -1,9 +1,11 @@
 package com.whpu.servlet;
 
+import com.alibaba.fastjson.JSON;
 import com.whpu.dao.StudentDao;
 import com.whpu.dao.StudentDaoImplement;
 import com.whpu.dao.UserDao;
 import com.whpu.dao.UserDaoImplement;
+import com.whpu.entity.Response;
 import com.whpu.entity.Student;
 import com.whpu.entity.User;
 
@@ -35,31 +37,32 @@ public class UserRegServlet implements Servlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        // 输出获取的信息
-        System.out.println("username = " + username);
-        System.out.println("password = " + password);
-
-        String result = "";
-
+        System.out.println(username);
         // 响应页面结果
         HttpServletResponse response = (HttpServletResponse) servletResponse;
-        response.setContentType("text/html;charset=utf-8");
-        response.getWriter().print(result);
+        response.setContentType("application/json;charset=utf-8");
 
         // 根据输入的用户名和密码，数据库中查询是否存在该用户
         String loginType = request.getParameter("loginType");
         UserDao userDao = new UserDaoImplement();
         StudentDao studentDao = new StudentDaoImplement();
+        Response result = new Response();
 
         try {
             User user = userDao.login(username, password); // 实参
             if (user != null && loginType.equals("管理员")) { // object默认为null
+                result.setData(user);
+                result.setCode(200);
+                result.setMessage("管理员成功登录!");
                 response.sendRedirect("all");
 
             } else if (loginType.equals("管理员")) {
-                result = "管理员登陆失败!";
-                response.getWriter().print(result);
+                result.setCode(404);
+                result.setMessage("管理员成功失败!");
             }
+
+            String res = JSON.toJSONString(result);
+            response.getWriter().print(res);
 
             Student student = studentDao.login(username, password);
             if (loginType.equals("学生") && student != null) {
