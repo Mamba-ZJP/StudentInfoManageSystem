@@ -17,4 +17,6 @@ public interface StudentDao {
 
     // 修改2 编辑页面完成，点击修改保存（更新保存）
     public void updateStu(Student student) throws SQLException;
+
+    public List<Student> selectAllStu() throws SQLException;
 }

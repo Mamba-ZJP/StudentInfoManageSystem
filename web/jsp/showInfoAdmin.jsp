@@ -13,7 +13,6 @@
 </head>
 <body>
     进入操作页面
-    ${studentList}
     <table border="1">
         <tr>
             <td>编号</td>

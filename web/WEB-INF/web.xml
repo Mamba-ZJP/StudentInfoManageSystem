@@ -40,4 +40,17 @@
         <!--访问的后缀-->
         <url-pattern>/updateSubmit</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <!--声明Servlet名称-->
+        <servlet-name>selectAll</servlet-name>
+        <!--实现类-->
+        <servlet-class>com.whpu.servlet.SelectAllStuServlet</servlet-class>
+    </servlet>
+    <!--映射请求路径-->
+    <servlet-mapping>
+        <servlet-name>selectAll</servlet-name>
+        <!--访问的后缀-->
+        <url-pattern>/all</url-pattern>
+    </servlet-mapping>
 </web-app>

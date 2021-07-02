@@ -38,4 +38,10 @@ public class StudentDaoImplement implements StudentDao {
         qr.update(sql, student.getSname(), student.getSno(), student.getGradeid(), student.getAddress(),
                 student.getScore(), student.getPassword(), student.getSid());
     }
+
+    @Override
+    public List<Student> selectAllStu() throws SQLException {
+        String sql = "SELECT * FROM student";
+        return qr.query(sql, new BeanListHandler<Student>(Student.class));
+    }
 }

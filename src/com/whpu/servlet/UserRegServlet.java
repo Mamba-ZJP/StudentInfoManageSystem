@@ -54,14 +54,7 @@ public class UserRegServlet implements Servlet {
         try {
             User user = userDao.login(username, password); // 实参
             if (user != null && loginType.equals("管理员")) { // object默认为null
-                result = "登陆成功!";
-
-                // 跳转页面 同时传递数据（将所有学生信息展示出来）
-                List<Student> studentList = userDao.selectAllStu();
-
-                // 将数据放到请求域中，传递到页面(应用3)
-                request.setAttribute("studentList", studentList);
-                request.getRequestDispatcher("jsp/showInfoAdmin.jsp").forward(request, response);
+                response.sendRedirect("all");
 
             } else if (loginType.equals("管理员")) {
                 result = "管理员登陆失败!";
@@ -70,13 +63,10 @@ public class UserRegServlet implements Servlet {
 
             Student student = studentDao.login(username, password);
             if (loginType.equals("学生") && student != null) {
-                // 转发到
+                // 转发到·
                 response.getWriter().print("学生登录成功");
                 List<Student> studentList = studentDao.selectGradeStu(username);
-                System.out.println("你好");
-                for (Student stu: studentList) {
-                    System.out.println("stu = " + stu);
-                }
+
                 // 将数据放到请求域中，传递到页面(应用3)
                 request.setAttribute("studentList", studentList);
                 request.getRequestDispatcher("jsp/showInfoStudent.jsp").forward(request, response);
