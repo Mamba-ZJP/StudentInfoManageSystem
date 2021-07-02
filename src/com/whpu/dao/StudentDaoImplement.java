@@ -44,4 +44,22 @@ public class StudentDaoImplement implements StudentDao {
         String sql = "SELECT * FROM student";
         return qr.query(sql, new BeanListHandler<Student>(Student.class));
     }
+
+    @Override
+    public void addStu(Student student) throws SQLException {
+        String sql = "INSERT INTO student(sname, sno, gradeid, address, score, PASSWORD) values(?, ?, ?, ?, ?, ?)";
+        qr.insert(sql, new BeanListHandler<Student>(Student.class), student.getSname(), student.getSno(),
+                student.getGradeid(), student.getAddress(), student.getScore(), student.getPassword());
+    }
+
+    @Override
+    public void deleteStu(Integer id) {
+        String sql = "DELETE FROM student WHERE sid=?";
+        try {
+            qr.update(sql, id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

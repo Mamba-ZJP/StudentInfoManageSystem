@@ -31,9 +31,10 @@
                 <td>${s.gradeid}</td>
                 <td>${s.address}</td>
                 <td>${s.score}</td>
-                <td><a href="/updateEdit?sid=${s.sid}">修改</a>  <a href="">删除</a> </td>
+                <td><a href="/updateEdit?sid=${s.sid}">修改</a>  <a href="/deleteStu?sid=${s.sid}">删除</a> </td>
             </tr>
         </c:forEach>
     </table>
+    <a href="jsp/addStu.jsp">添加学生</a>
 </body>
 </html>

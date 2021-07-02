@@ -19,4 +19,8 @@ public interface StudentDao {
     public void updateStu(Student student) throws SQLException;
 
     public List<Student> selectAllStu() throws SQLException;
+
+    public void addStu(Student student) throws SQLException;
+
+    public void deleteStu(Integer id);
 }

@@ -19,6 +19,15 @@ public class Student {
         this.password = password;
     }
 
+    public Student(String sname, String sno, Integer gradeid, String address, Integer score, String password) {
+        this.sname = sname;
+        this.sno = sno;
+        this.gradeid = gradeid;
+        this.address = address;
+        this.score = score;
+        this.password = password;
+    }
+
     public Student() {}
 
     public Integer getSid() {

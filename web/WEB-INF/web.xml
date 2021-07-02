@@ -53,4 +53,30 @@
         <!--访问的后缀-->
         <url-pattern>/all</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <!--声明Servlet名称-->
+        <servlet-name>addStu</servlet-name>
+        <!--实现类-->
+        <servlet-class>com.whpu.servlet.AddStuServlet</servlet-class>
+    </servlet>
+    <!--映射请求路径-->
+    <servlet-mapping>
+        <servlet-name>addStu</servlet-name>
+        <!--访问的后缀-->
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <!--声明Servlet名称-->
+        <servlet-name>deleteStu</servlet-name>
+        <!--实现类-->
+        <servlet-class>com.whpu.servlet.DeleteStuServlet</servlet-class>
+    </servlet>
+    <!--映射请求路径-->
+    <servlet-mapping>
+        <servlet-name>deleteStu</servlet-name>
+        <!--访问的后缀-->
+        <url-pattern>/deleteStu</url-pattern>
+    </servlet-mapping>
 </web-app>
