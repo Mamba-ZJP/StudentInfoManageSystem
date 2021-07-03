@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
 public class UserRegServlet implements Servlet {
 
@@ -53,24 +52,18 @@ public class UserRegServlet implements Servlet {
             if (user != null && loginType.equals("user")) { // object默认为null
                 result.setAll(200, user, "管理员成功登录!");
             } else if (loginType.equals("user")) {
-                result.setAll(404, null, "管理员成功失败!");
+                result.setAll(404, null, "管理员登录失败!");
+            }
+
+            Student student = studentDao.login(username, password);
+            if (loginType.equals("student") && student != null) {
+                result.setAll(200, student, "学生登录成功!");
+            } else if (loginType.equals("student")) {
+                result.setAll(200, student, "学生登录失败!");
             }
 
             String res = JSON.toJSONString(result);
             response.getWriter().print(res);
-
-            Student student = studentDao.login(username, password);
-            if (loginType.equals("student") && student != null) {
-                // 转发到·
-                response.getWriter().print("学生登录成功");
-                List<Student> studentList = studentDao.selectGradeStu(username);
-
-                // 将数据放到请求域中，传递到页面(应用3)
-                request.setAttribute("studentList", studentList);
-
-            } else if (loginType.equals("student")) {
-                response.getWriter().print("学生登录失败");
-            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

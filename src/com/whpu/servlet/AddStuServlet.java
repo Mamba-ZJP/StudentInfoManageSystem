@@ -34,7 +34,7 @@ public class AddStuServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        resp.sendRedirect("all");
+        resp.sendRedirect("selectAll");
     }
 
     @Override

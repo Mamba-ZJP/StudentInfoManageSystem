@@ -1,7 +1,9 @@
 package com.whpu.servlet;
 
+import com.alibaba.fastjson.JSON;
 import com.whpu.dao.StudentDao;
 import com.whpu.dao.StudentDaoImplement;
+import com.whpu.entity.Response;
 import com.whpu.entity.Student;
 
 import javax.servlet.*;
@@ -31,14 +33,17 @@ public class SelectAllStuServlet implements Servlet {
         StudentDao studentDao = new StudentDaoImplement();
 
         List<Student> studentList = null;
+        Response result = new Response();
         try {
             studentList = studentDao.selectAllStu();
-            request.setAttribute("studentList", studentList);
-            request.getRequestDispatcher("jsp/showInfoAdmin.jsp").forward(request, response);
+            result.setAll(200, studentList, "操作成功!");
         } catch (SQLException e) {
             e.printStackTrace();
+            result.setAll(200, studentList, "操作失败!");
         }
 
+        String res = JSON.toJSONString(result);
+        response.getWriter().print(res);
     }
 
     @Override

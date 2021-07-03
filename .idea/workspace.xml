@@ -8,9 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="51cb1dca-77b4-47ed-b025-75e14ec24358" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/c3p0-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/c3p0-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/whpu/entity/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/whpu/entity/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/whpu/servlet/AddStuServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/whpu/servlet/AddStuServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/whpu/servlet/SelectAllStuServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/whpu/servlet/SelectAllStuServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/whpu/servlet/UserRegServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/whpu/servlet/UserRegServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,16 +91,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="310" />
+          <entry key="java" value="333" />
           <entry key="jsp" value="1" />
-          <entry key="txt" value="26" />
+          <entry key="txt" value="96" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="310" />
+          <entry key="JAVA" value="333" />
           <entry key="JSP" value="1" />
-          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="PLAIN_TEXT" value="96" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -117,41 +118,41 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-454492923">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="237" />
+          <entry key="xml" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="237" />
+          <entry key="XML" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/whpu/servlet/UserRegServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/whpu/entity/Response.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-              <folding>
-                <element signature="e#157#158#0" expanded="true" />
-                <element signature="e#184#185#0" expanded="true" />
-                <element signature="e#225#226#0" expanded="true" />
-                <element signature="e#257#258#0" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#351#352#0" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-                <element signature="e#417#418#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/c3p0-config.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -188,8 +189,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4646">
-              <caret line="104" column="40" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
+            <state relative-caret-position="1785">
+              <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -197,8 +198,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/whpu/servlet/SelectAllStuServlet.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/whpu/servlet/AddStuServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="53" column="31" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -239,22 +258,22 @@
         <option value="$PROJECT_DIR$/src/com/whpu/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/whpu/dao/UserDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/com/whpu/servlet/UpdateEditServlet.java" />
-        <option value="$PROJECT_DIR$/src/com/whpu/servlet/SelectAllStuServlet.java" />
         <option value="$PROJECT_DIR$/src/com/whpu/entity/Student.java" />
         <option value="$PROJECT_DIR$/web/jsp/showInfoStudent.jsp" />
         <option value="$PROJECT_DIR$/src/com/whpu/dao/StudentDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/com/whpu/dao/StudentDao.java" />
         <option value="$PROJECT_DIR$/src/com/whpu/servlet/DeleteStuServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/jsp/showInfoAdmin.jsp" />
         <option value="$PROJECT_DIR$/src/com/whpu/servlet/UpdateSubmitServlet.java" />
         <option value="$PROJECT_DIR$/web/jsp/updateStu.jsp" />
-        <option value="$PROJECT_DIR$/src/com/whpu/servlet/AddStuServlet.java" />
         <option value="$PROJECT_DIR$/web/jsp/addStu.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/c3p0-config.xml" />
         <option value="$PROJECT_DIR$/src/com/whpu/entity/Response.java" />
         <option value="$PROJECT_DIR$/src/com/whpu/servlet/UserRegServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/com/whpu/servlet/SelectAllStuServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/whpu/servlet/AddStuServlet.java" />
       </list>
     </option>
   </component>
@@ -285,6 +304,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -342,12 +362,24 @@
               <item name="Backend" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -553,7 +585,8 @@
       <workItem from="1625236132482" duration="17000" />
       <workItem from="1625236501491" duration="1999000" />
       <workItem from="1625275216571" duration="2648000" />
-      <workItem from="1625277985897" duration="1717000" />
+      <workItem from="1625277985897" duration="4138000" />
+      <workItem from="1625282367017" duration="2159000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1625104809015</created>
@@ -611,13 +644,27 @@
       <option name="project" value="LOCAL" />
       <updated>1625278407211</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="封装了responseAPI，完成userLogin().">
+      <created>1625279813633</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1625279813633</updated>
+    </task>
+    <task id="LOCAL-00010" summary="修改了Response封装细节：将data类型改为Object类型。">
+      <created>1625282004344</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1625282004344</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71560000" />
+    <option name="totallyTimeSpent" value="76140000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -630,7 +677,7 @@
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25262308" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25665858" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -640,13 +687,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294702" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49798223" weight="0.41887417" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49798223" weight="0.1821192" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32781458" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32781458" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29801324" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.29801324" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50201774" side_tool="true" weight="0.9221854" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32781458" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3283582" />
@@ -715,7 +762,9 @@
     <MESSAGE value="修改页面跳转路径，增加上下文。" />
     <MESSAGE value="增加新的xml文件。" />
     <MESSAGE value="封装response" />
-    <option name="LAST_COMMIT_MESSAGE" value="封装response" />
+    <MESSAGE value="封装了responseAPI，完成userLogin()." />
+    <MESSAGE value="修改了Response封装细节：将data类型改为Object类型。" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了Response封装细节：将data类型改为Object类型。" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://E:/Tools/Java/apache-tomcat-9.0.19/lib/servlet-api.jar!/javax/servlet/Servlet.class">
@@ -826,24 +875,10 @@
     <entry file="file://$PROJECT_DIR$/StudentInfoManageSystem.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/whpu/servlet/AddStuServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/whpu/servlet/DeleteStuServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -853,40 +888,17 @@
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/whpu/servlet/SelectAllStuServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/com/whpu/servlet/UserRegServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+        <state relative-caret-position="406">
+          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/whpu/entity/Student.java">
+    <entry file="file://$PROJECT_DIR$/src/com/whpu/entity/Response.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4646">
-          <caret line="104" column="40" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        <state relative-caret-position="272">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -897,31 +909,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/whpu/entity/Response.java">
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-          <folding>
-            <element signature="e#157#158#0" expanded="true" />
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1785">
+          <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/whpu/servlet/UserRegServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/com/whpu/entity/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="53" column="31" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/whpu/servlet/SelectAllStuServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/whpu/servlet/AddStuServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
         </state>
       </provider>
     </entry>

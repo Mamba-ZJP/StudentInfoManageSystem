@@ -51,7 +51,7 @@
     <servlet-mapping>
         <servlet-name>selectAll</servlet-name>
         <!--访问的后缀-->
-        <url-pattern>/all</url-pattern>
+        <url-pattern>/selectAll</url-pattern>
     </servlet-mapping>
 
     <servlet>
