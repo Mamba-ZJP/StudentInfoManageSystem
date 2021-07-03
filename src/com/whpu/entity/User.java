@@ -5,8 +5,25 @@ public class User {
     private Integer id; // 用户编号
     private String username;
     private String password;
+    private String phone;
+    private Integer status;
 
-    // 创建get, set方法 取值和赋值操作
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+// 创建get, set方法 取值和赋值操作
 
     public Integer getId() {
         return id;
@@ -32,6 +49,12 @@ public class User {
         this.password = password;
     }
 
+    public void setAll(String username, String password, String phone, Integer status) {
+        this.password = password;
+        this.username = username;
+        this.phone = phone;
+        this.status = status;
+    }
     // 重写toString
 
     @Override

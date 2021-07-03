@@ -54,12 +54,12 @@ public class SelectAllStuServlet implements Servlet {
             } catch (SQLException e) {
                 e.printStackTrace();
                 result.setAll(404, studentList, "操作失败!");
+                response.getWriter().print(JSON.toJSONString(result));
+
             }
         }
 
-
-        String res = JSON.toJSONString(result);
-        response.getWriter().print(res);
+        response.getWriter().print(JSON.toJSONString(result));
     }
 
     @Override

@@ -62,13 +62,12 @@ public class UserRegServlet implements Servlet {
                 result.setAll(200, student, "学生登录失败!");
             }
 
-            String res = JSON.toJSONString(result);
-            response.getWriter().print(res);
         } catch (SQLException e) {
             e.printStackTrace();
+            response.getWriter().print(JSON.toJSONString(result));
         }
 
-
+        response.getWriter().print(JSON.toJSONString(result));
     }
 
     @Override

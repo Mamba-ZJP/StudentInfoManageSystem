@@ -1,5 +1,6 @@
 package com.whpu.servlet;
 
+import com.alibaba.fastjson.JSON;
 import com.whpu.dao.StudentDao;
 import com.whpu.dao.StudentDaoImplement;
 import com.whpu.entity.Response;
@@ -51,6 +52,7 @@ public class UpdateSubmitServlet implements Servlet {
         } catch (SQLException e) {
             e.printStackTrace();
             result.setAll(404, null, "操作失败");
+            response.getWriter().print(JSON.toJSONString(result));
         }
 
         String loginType = request.getParameter("loginType");

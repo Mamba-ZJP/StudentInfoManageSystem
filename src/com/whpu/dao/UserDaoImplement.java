@@ -25,4 +25,10 @@ public class UserDaoImplement implements UserDao {
         String sql = "SELECT * FROM student";
         return qr.query(sql, new BeanListHandler<Student>(Student.class));
     }
+
+    @Override
+    public void addUser(User user) throws SQLException {
+        String sql = "INSERT INTO user(username, password, phone, status) values(?, ?, ?, ?)";
+        qr.update(sql, user.getUsername(), user.getPassword(), user.getPhone(), user.getStatus());
+    }
 }
