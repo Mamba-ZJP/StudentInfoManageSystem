@@ -64,7 +64,7 @@
     <servlet-mapping>
         <servlet-name>addStu</servlet-name>
         <!--访问的后缀-->
-        <url-pattern>/add</url-pattern>
+        <url-pattern>/addStu</url-pattern>
     </servlet-mapping>
 
     <servlet>
