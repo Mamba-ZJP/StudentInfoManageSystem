@@ -50,13 +50,13 @@ public class UserRegServlet implements Servlet {
 
         try {
             User user = userDao.login(username, password); // 实参
-            if (user != null && loginType.equals("管理员")) { // object默认为null
+            if (user != null && loginType.equals("user")) { // object默认为null
                 result.setData(user);
                 result.setCode(200);
                 result.setMessage("管理员成功登录!");
                 response.sendRedirect("all");
 
-            } else if (loginType.equals("管理员")) {
+            } else if (loginType.equals("user")) {
                 result.setCode(404);
                 result.setMessage("管理员成功失败!");
             }
@@ -65,7 +65,7 @@ public class UserRegServlet implements Servlet {
             response.getWriter().print(res);
 
             Student student = studentDao.login(username, password);
-            if (loginType.equals("学生") && student != null) {
+            if (loginType.equals("student") && student != null) {
                 // 转发到·
                 response.getWriter().print("学生登录成功");
                 List<Student> studentList = studentDao.selectGradeStu(username);
@@ -74,7 +74,7 @@ public class UserRegServlet implements Servlet {
                 request.setAttribute("studentList", studentList);
                 request.getRequestDispatcher("jsp/showInfoStudent.jsp").forward(request, response);
 
-            } else if (loginType.equals("学生")) {
+            } else if (loginType.equals("student")) {
                 response.getWriter().print("学生登录失败");
             }
         } catch (SQLException e) {

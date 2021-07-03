@@ -11,7 +11,7 @@
     <title>注册页面</title>
   </head>
   <body>
-    <form action="reg">
+    <form action="/reg">
       用户名：
       <input type="text" name="username" required> <br>
       密 码：
