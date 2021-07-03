@@ -40,8 +40,8 @@ public class AddStuServlet extends HttpServlet {
             result.setAll(404, null, "操作失败！");
             response.getWriter().print(JSON.toJSONString(result));
         }
-
-        resp.sendRedirect("selectAll");
+        String loginType = req.getParameter("loginType");
+        resp.sendRedirect("selectAll?loginType=" + loginType);
     }
 
     @Override
