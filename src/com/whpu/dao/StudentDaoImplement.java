@@ -34,9 +34,9 @@ public class StudentDaoImplement implements StudentDao {
 
     @Override
     public void updateStu(Student student) throws SQLException {
-        String sql = "UPDATE student SET sname=?,sno=?,gradeid=?,address=?,score=?,PASSWORD=? WHERE sid =?";
+        String sql = "UPDATE student SET sname=?,sno=?,gradeid=?,address=?,score=?,PASSWORD=?, status=? WHERE sid =?";
         qr.update(sql, student.getSname(), student.getSno(), student.getGradeid(), student.getAddress(),
-                student.getScore(), student.getPassword(), student.getSid());
+                student.getScore(), student.getPassword(), student.getStatus(),student.getSid());
     }
 
     @Override

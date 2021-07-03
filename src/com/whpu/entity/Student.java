@@ -8,8 +8,9 @@ public class Student {
     private String address;
     private Integer score;
     private String password;
+    private Integer status;
 
-    public Student(Integer sid, String sname, String sno, Integer gradeid, String address, Integer score, String password) {
+    public Student(Integer sid, String sname, String sno, Integer gradeid, String address, Integer score, String password, Integer status) {
         this.sid = sid;
         this.sname = sname;
         this.sno = sno;
@@ -17,15 +18,17 @@ public class Student {
         this.address = address;
         this.score = score;
         this.password = password;
+        this.status = status;
     }
 
-    public Student(String sname, String sno, Integer gradeid, String address, Integer score, String password) {
+    public Student(String sname, String sno, Integer gradeid, String address, Integer score, String password, Integer status) {
         this.sname = sname;
         this.sno = sno;
         this.gradeid = gradeid;
         this.address = address;
         this.score = score;
         this.password = password;
+        this.status = status;
     }
 
     public Student() {}
@@ -96,5 +99,13 @@ public class Student {
                 ", address='" + address + '\'' +
                 ", score=" + score +
                 '}';
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

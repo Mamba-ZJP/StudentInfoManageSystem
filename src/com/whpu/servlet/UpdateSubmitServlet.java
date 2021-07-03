@@ -40,9 +40,10 @@ public class UpdateSubmitServlet implements Servlet {
 
         int gradeid = Integer.parseInt(request.getParameter("gradeid"));
         int score = Integer.parseInt(request.getParameter("score"));
+        int status = Integer.parseInt(request.getParameter("status"));
 
-        Student student = new Student(sid, sname, sno, gradeid, address, score, password);
-
+        Student student = new Student(sid, sname, sno, gradeid, address, score, password, status);
+        System.out.println("sid = " + sid);
         Response result = new Response();
 
         try {
@@ -52,7 +53,8 @@ public class UpdateSubmitServlet implements Servlet {
             result.setAll(404, null, "操作失败");
         }
 
-        response.sendRedirect("selectAll");
+        String loginType = request.getParameter("loginType");
+        response.sendRedirect("selectAll?loginType=" + loginType);
     }
 
     @Override

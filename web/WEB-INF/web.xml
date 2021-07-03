@@ -38,7 +38,7 @@
     <servlet-mapping>
         <servlet-name>updateSubmit</servlet-name>
         <!--访问的后缀-->
-        <url-pattern>/updateSubmit</url-pattern>
+        <url-pattern>/updateStu</url-pattern>
     </servlet-mapping>
 
     <servlet>

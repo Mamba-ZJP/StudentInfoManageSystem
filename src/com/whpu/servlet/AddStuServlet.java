@@ -32,7 +32,7 @@ public class AddStuServlet extends HttpServlet {
         String address = req.getParameter("address");
         String password = req.getParameter("password");
 
-        Student student = new Student(sname, sno, gradeid, address, score, password);
+        Student student = new Student(sname, sno, gradeid, address, score, password, 1);
         try {
             studentDao.addStu(student);
         } catch (SQLException e) {
