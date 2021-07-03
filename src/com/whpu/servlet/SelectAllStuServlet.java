@@ -31,6 +31,7 @@ public class SelectAllStuServlet implements Servlet {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
         StudentDao studentDao = new StudentDaoImplement();
+        response.setContentType("application/json;charset=utf-8");
 
         List<Student> studentList = null;
         Response result = new Response();
