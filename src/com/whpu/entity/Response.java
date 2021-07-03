@@ -17,7 +17,7 @@ public class Response {
         return data;
     }
 
-    public void setData(User data) {
+    public void setData(Object data) {
         this.data = data;
     }
 
