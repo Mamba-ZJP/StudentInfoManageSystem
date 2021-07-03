@@ -2,6 +2,7 @@ package com.whpu.servlet;
 
 import com.whpu.dao.StudentDao;
 import com.whpu.dao.StudentDaoImplement;
+import com.whpu.entity.Response;
 import com.whpu.entity.Student;
 
 import javax.servlet.*;
@@ -28,6 +29,7 @@ public class UpdateSubmitServlet implements Servlet {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         // 获取修改页面的学生属性值
         StudentDao studentDao = new StudentDaoImplement();
+
         String s = request.getParameter("sid");
         int sid = Integer.parseInt(s);
 
@@ -40,13 +42,17 @@ public class UpdateSubmitServlet implements Servlet {
         int score = Integer.parseInt(request.getParameter("score"));
 
         Student student = new Student(sid, sname, sno, gradeid, address, score, password);
+
+        Response result = new Response();
+
         try {
             studentDao.updateStu(student);
         } catch (SQLException e) {
             e.printStackTrace();
+            result.setAll(404, null, "操作失败");
         }
 
-        response.sendRedirect("all");
+        response.sendRedirect("selectAll");
     }
 
     @Override

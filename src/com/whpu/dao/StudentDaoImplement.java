@@ -15,14 +15,14 @@ public class StudentDaoImplement implements StudentDao {
 
     @Override
     public List<Student> selectGradeStu(String name) throws SQLException {
-        String sql = "SELECT * FROM student WHERE gradeid = (SELECT gradeid FROM student WHERE sname=?)";
+        String sql = "SELECT * FROM student WHERE gradeid = (SELECT gradeid FROM student WHERE sname=?) and status=1";
         List<Student> studentList = qr.query(sql, new BeanListHandler<Student>(Student.class), name);
         return studentList;
     }
 
     @Override
     public Student login(String name, String pwd) throws SQLException {
-        String sql = "select * from student where sname=? and password=?";
+        String sql = "select * from student where sname=? and password=? and status=1";
         return qr.query(sql, new BeanHandler<Student>(Student.class), name, pwd);
     }
 
@@ -41,7 +41,7 @@ public class StudentDaoImplement implements StudentDao {
 
     @Override
     public List<Student> selectAllStu() throws SQLException {
-        String sql = "SELECT * FROM student";
+        String sql = "SELECT * FROM student where status=1";
         return qr.query(sql, new BeanListHandler<Student>(Student.class));
     }
 
@@ -54,7 +54,7 @@ public class StudentDaoImplement implements StudentDao {
 
     @Override
     public void deleteStu(Integer id) {
-        String sql = "DELETE FROM student WHERE sid=?";
+        String sql = "UPDATE student SET status=0 WHERE sid=?";
         try {
             qr.update(sql, id);
         } catch (SQLException e) {

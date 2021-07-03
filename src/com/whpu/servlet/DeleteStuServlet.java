@@ -15,9 +15,12 @@ public class DeleteStuServlet extends HttpServlet {
 //        super.doGet(req, resp);
         // 获取学生表的编号
         Integer id = Integer.parseInt(req.getParameter("sid"));
+        String loginType = req.getParameter("loginType");
+
         StudentDao studentDao = new StudentDaoImplement();
         studentDao.deleteStu(id);
-        resp.sendRedirect("all");
+
+        resp.sendRedirect("selectAll?loginType=" + loginType);
     }
 
     @Override
