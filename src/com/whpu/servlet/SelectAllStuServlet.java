@@ -34,14 +34,29 @@ public class SelectAllStuServlet implements Servlet {
         response.setContentType("application/json;charset=utf-8");
 
         List<Student> studentList = null;
+        String loginType = request.getParameter("loginType");
+
         Response result = new Response();
-        try {
-            studentList = studentDao.selectAllStu();
-            result.setAll(200, studentList, "操作成功!");
-        } catch (SQLException e) {
-            e.printStackTrace();
-            result.setAll(200, studentList, "操作失败!");
+
+        if (loginType.equals("user")) {
+            try {
+                studentList = studentDao.selectAllStu();
+                result.setAll(200, studentList, "操作成功!");
+            } catch (SQLException e) {
+                e.printStackTrace();
+                result.setAll(404, studentList, "操作失败!");
+            }
+        } else if (loginType.equals("student")) {
+            String studentName = request.getParameter("username");
+            try {
+                studentList = studentDao.selectGradeStu(studentName);
+                result.setAll(200, studentList, "操作成功!");
+            } catch (SQLException e) {
+                e.printStackTrace();
+                result.setAll(404, studentList, "操作失败!");
+            }
         }
+
 
         String res = JSON.toJSONString(result);
         response.getWriter().print(res);
