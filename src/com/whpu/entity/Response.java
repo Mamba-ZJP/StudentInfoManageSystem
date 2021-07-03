@@ -2,7 +2,7 @@ package com.whpu.entity;
 
 public class Response {
     private Integer code;
-    private User data;
+    private Object data;
     private String message;
 
     public Integer getCode() {
@@ -13,7 +13,7 @@ public class Response {
         this.code = code;
     }
 
-    public User getData() {
+    public Object getData() {
         return data;
     }
 
@@ -26,6 +26,12 @@ public class Response {
     }
 
     public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setAll(Integer code, Object data, String message) {
+        this.code = code;
+        this.data = data;
         this.message = message;
     }
 }

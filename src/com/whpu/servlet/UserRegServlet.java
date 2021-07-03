@@ -51,14 +51,9 @@ public class UserRegServlet implements Servlet {
         try {
             User user = userDao.login(username, password); // 实参
             if (user != null && loginType.equals("user")) { // object默认为null
-                result.setData(user);
-                result.setCode(200);
-                result.setMessage("管理员成功登录!");
-                response.sendRedirect("all");
-
+                result.setAll(200, user, "管理员成功登录!");
             } else if (loginType.equals("user")) {
-                result.setCode(404);
-                result.setMessage("管理员成功失败!");
+                result.setAll(404, null, "管理员成功失败!");
             }
 
             String res = JSON.toJSONString(result);
@@ -72,7 +67,6 @@ public class UserRegServlet implements Servlet {
 
                 // 将数据放到请求域中，传递到页面(应用3)
                 request.setAttribute("studentList", studentList);
-                request.getRequestDispatcher("jsp/showInfoStudent.jsp").forward(request, response);
 
             } else if (loginType.equals("student")) {
                 response.getWriter().print("学生登录失败");
