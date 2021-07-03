@@ -47,7 +47,7 @@ public class SelectAllStuServlet implements Servlet {
                 result.setAll(404, studentList, "操作失败!");
             }
         } else if (loginType.equals("student")) {
-            String studentName = request.getParameter("username");
+            String studentName = request.getParameter("sname");
             try {
                 studentList = studentDao.selectGradeStu(studentName);
                 result.setAll(200, studentList, "操作成功!");
