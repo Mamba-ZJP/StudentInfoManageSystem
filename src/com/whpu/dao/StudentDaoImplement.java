@@ -47,7 +47,7 @@ public class StudentDaoImplement implements StudentDao {
 
     @Override
     public void addStu(Student student) throws SQLException {
-        String sql = "INSERT INTO student(sname, sno, gradeid, address, score, PASSWORD) values(?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO student(sname, sno, gradeid, address, score, PASSWORD, status) values(?, ?, ?, ?, ?, ?, 1)";
         qr.insert(sql, new BeanListHandler<Student>(Student.class), student.getSname(), student.getSno(),
                 student.getGradeid(), student.getAddress(), student.getScore(), student.getPassword());
     }
