@@ -14,4 +14,6 @@ public interface UserDao {
     public List<Student> selectAllStu() throws SQLException;
 
     public void addUser(User user) throws SQLException;
+
+    public void changePwd(String username, String pwd) throws SQLException;
 }

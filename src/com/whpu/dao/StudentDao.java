@@ -22,5 +22,7 @@ public interface StudentDao {
 
     public void addStu(Student student) throws SQLException;
 
-    public void deleteStu(Integer id);
+    public void deleteStu(Integer id) throws SQLException;
+
+    public void changePwd(String sname, String pwd) throws SQLException;
 }

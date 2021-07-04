@@ -59,15 +59,15 @@ public class UserRegServlet implements Servlet {
             if (loginType.equals("student") && student != null) {
                 result.setAll(200, student, "学生登录成功!");
             } else if (loginType.equals("student")) {
-                result.setAll(200, student, "学生登录失败!");
+                result.setAll(404, student, "学生登录失败!");
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
             response.getWriter().print(JSON.toJSONString(result));
         }
 
-        response.getWriter().print(JSON.toJSONString(result));
     }
 
     @Override

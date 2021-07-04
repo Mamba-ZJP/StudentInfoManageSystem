@@ -21,6 +21,7 @@ public class AddStuServlet extends HttpServlet {
 //        super.doGet(req, resp);
         HttpServletRequest request = req;
         HttpServletResponse response = resp;
+        response.setContentType("application/json;charset=utf-8");
 
         StudentDao studentDao = new StudentDaoImplement();
         Response result = new Response();
@@ -37,7 +38,7 @@ public class AddStuServlet extends HttpServlet {
             studentDao.addStu(student);
         } catch (SQLException e) {
             e.printStackTrace();
-            result.setAll(404, null, "操作失败！");
+            result.setAll(404, null, "添加学生失败！");
             response.getWriter().print(JSON.toJSONString(result));
         }
         String loginType = req.getParameter("loginType");

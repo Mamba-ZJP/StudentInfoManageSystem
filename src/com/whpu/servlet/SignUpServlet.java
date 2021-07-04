@@ -44,13 +44,13 @@ public class SignUpServlet implements Servlet {
         UserDao userDao = new UserDaoImplement();
         try {
             userDao.addUser(user);
-            result.setAll(200, null, "操作成功！");
+            result.setAll(200, null, "注册成功！");
         } catch (SQLException e) {
             e.printStackTrace();
-            result.setAll(404, null, "操作失败！");
+            result.setAll(404, null, "注册失败！");
+        } finally {
             response.getWriter().print(JSON.toJSONString(result));
         }
-        response.getWriter().print(JSON.toJSONString(result));
     }
 
     @Override

@@ -31,4 +31,10 @@ public class UserDaoImplement implements UserDao {
         String sql = "INSERT INTO user(username, password, phone, status) values(?, ?, ?, ?)";
         qr.update(sql, user.getUsername(), user.getPassword(), user.getPhone(), user.getStatus());
     }
+
+    @Override
+    public void changePwd(String username, String pwd) throws SQLException {
+        String sql = "UPDATE user SET password=? WHERE sname=?";
+        qr.update(sql, pwd, username);
+    }
 }

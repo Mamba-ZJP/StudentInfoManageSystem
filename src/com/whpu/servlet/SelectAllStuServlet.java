@@ -45,6 +45,8 @@ public class SelectAllStuServlet implements Servlet {
             } catch (SQLException e) {
                 e.printStackTrace();
                 result.setAll(404, studentList, "操作失败!");
+            } finally {
+                response.getWriter().print(JSON.toJSONString(result));
             }
         } else if (loginType.equals("student")) {
             String studentName = request.getParameter("sname");
@@ -55,11 +57,11 @@ public class SelectAllStuServlet implements Servlet {
                 e.printStackTrace();
                 result.setAll(404, studentList, "操作失败!");
                 response.getWriter().print(JSON.toJSONString(result));
-
+            } finally {
+                response.getWriter().print(JSON.toJSONString(result));
             }
         }
 
-        response.getWriter().print(JSON.toJSONString(result));
     }
 
     @Override

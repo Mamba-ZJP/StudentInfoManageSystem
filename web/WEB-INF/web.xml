@@ -92,4 +92,17 @@
         <!--访问的后缀-->
         <url-pattern>/signUp</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <!--声明Servlet名称-->
+        <servlet-name>changePwd</servlet-name>
+        <!--实现类-->
+        <servlet-class>com.whpu.servlet.ChangePwdServlet</servlet-class>
+    </servlet>
+    <!--映射请求路径-->
+    <servlet-mapping>
+        <servlet-name>changePwd</servlet-name>
+        <!--访问的后缀-->
+        <url-pattern>/changePwd</url-pattern>
+    </servlet-mapping>
 </web-app>

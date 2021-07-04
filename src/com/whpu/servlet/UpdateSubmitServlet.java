@@ -51,7 +51,7 @@ public class UpdateSubmitServlet implements Servlet {
             studentDao.updateStu(student);
         } catch (SQLException e) {
             e.printStackTrace();
-            result.setAll(404, null, "操作失败");
+            result.setAll(404, null, "更新失败");
             response.getWriter().print(JSON.toJSONString(result));
         }
 

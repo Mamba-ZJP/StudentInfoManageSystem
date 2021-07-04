@@ -53,13 +53,15 @@ public class StudentDaoImplement implements StudentDao {
     }
 
     @Override
-    public void deleteStu(Integer id) {
+    public void deleteStu(Integer id) throws SQLException {
         String sql = "UPDATE student SET status=0 WHERE sid=?";
-        try {
-            qr.update(sql, id);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        qr.update(sql, id);
+    }
+
+    @Override
+    public void changePwd(String sname, String pwd) throws SQLException {
+        String sql = "UPDATE student SET password=? WHERE sname=?";
+        qr.update(sql, pwd, sname);
     }
 
 }
