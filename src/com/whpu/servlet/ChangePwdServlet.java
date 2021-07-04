@@ -43,7 +43,7 @@ public class ChangePwdServlet extends HttpServlet {
 
         } else if (loginType.equals("student")) {
             StudentDao studentDao = new StudentDaoImplement();
-            String sname = request.getParameter("sname");
+            String sname = request.getParameter("username");
             String pwd = request.getParameter("password");
 
             try {
